@@ -144,6 +144,30 @@ export default function App() {
           <p className="text-xs text-muted-foreground">Everything stays on your device</p>
         </div>
 
+        {/* Hero */}
+        {(state.status === "idle" || state.status === "fileSelected") && (
+          <div className="text-center space-y-3 pb-2">
+            <h1 className="text-3xl font-bold tracking-tight text-foreground">
+              Turn any video into text
+            </h1>
+            <p className="text-muted-foreground leading-relaxed">
+              Drop a file and Whisper AI transcribes it right in your browser.
+              <br />
+              Nothing leaves your device.
+            </p>
+            <div className="flex items-center justify-center gap-2 pt-1 flex-wrap">
+              {["On-device AI", "No account", "Free"].map((label) => (
+                <span
+                  key={label}
+                  className="rounded-full border border-border bg-white/70 px-3 py-1 text-xs font-medium text-muted-foreground"
+                >
+                  {label}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Main card */}
         <Card className="p-8 shadow-sm">
           {/* Stepper */}
