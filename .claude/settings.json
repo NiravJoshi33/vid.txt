@@ -1,0 +1,15 @@
+{
+  "_comment": "Claude Code project settings. Uncomment hooks block once you've verified LSP works reliably — see .claude/hooks/block-grep-for-symbols.sh.",
+  "hooks": {
+    "_disabled_until_lsp_verified": {
+      "PreToolUse": [
+        {
+          "matcher": "Bash",
+          "hooks": [
+            { "type": "command", "command": ".claude/hooks/block-grep-for-symbols.sh" }
+          ]
+        }
+      ]
+    }
+  }
+}
